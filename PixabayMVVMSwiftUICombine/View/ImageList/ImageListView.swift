@@ -7,16 +7,27 @@ import SwiftUI
 
 struct ImageListView : View {
     @ObjectBinding var store = ImageStore(images: [])
+    @State var searchTerm: String = ""
 
-    init() {
-        store.search(withTerm: "sky")
-    }
     var body: some View {
         NavigationView {
-            List(store.images) { image in
-                ImageCell(image: image)
+            Section {
+                TextField($searchTerm, placeholder: Text("search term"), onEditingChanged: { _ in
+                    // do nothing
+                }) {
+                    self.store.search(withTerm: self.searchTerm)
+                }
+                .textFieldStyle(.roundedBorder)
+                .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+            }
+
+            Section {
+                List(store.images) { image in
+                    ImageCell(image: image)
+                }
             }
             .navigationBarTitle(Text("Images"))
+            .listStyle(.grouped)
         }
     }
 }
