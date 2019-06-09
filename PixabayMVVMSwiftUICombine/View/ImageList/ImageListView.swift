@@ -12,13 +12,21 @@ struct ImageListView : View {
     var body: some View {
         NavigationView {
             Section {
-                TextField($searchTerm, placeholder: Text("search term"), onEditingChanged: { _ in
-                    // do nothing
-                }) {
-                    self.store.search(withTerm: self.searchTerm)
+                HStack {
+                    TextField($searchTerm, placeholder: Text("search term"), onEditingChanged: { _ in
+                        // do nothing
+                    }) {
+                        self.store.search(withTerm: self.searchTerm)
+                    }
+                    .textFieldStyle(.roundedBorder)
+
+                    Button(action: {
+                        self.store.search(withTerm: self.searchTerm)
+                    }, label: {
+                        Text("Search")
+                    })
                 }
-                .textFieldStyle(.roundedBorder)
-                .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+                .padding(EdgeInsets(top: 8.0, leading: 16.0, bottom: 8.0, trailing: 16.0))
             }
 
             Section {
