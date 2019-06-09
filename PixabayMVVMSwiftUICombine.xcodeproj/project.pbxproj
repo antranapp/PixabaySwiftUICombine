@@ -3,18 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6392AA722AAD9AB00CE518C /* ImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6392AA622AAD9AB00CE518C /* ImageList.swift */; };
+		F6392AAA22AAE2EC00CE518C /* SwURL in Frameworks */ = {isa = PBXBuildFile; productRef = F6392AA922AAE2EC00CE518C /* SwURL */; };
 		F68C624222A8DD8900E5D515 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C624122A8DD8900E5D515 /* AppDelegate.swift */; };
 		F68C624422A8DD8900E5D515 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C624322A8DD8900E5D515 /* SceneDelegate.swift */; };
-		F68C624622A8DD8900E5D515 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C624522A8DD8900E5D515 /* ContentView.swift */; };
+		F68C624622A8DD8900E5D515 /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C624522A8DD8900E5D515 /* ImageListView.swift */; };
 		F68C624822A8DD8A00E5D515 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68C624722A8DD8A00E5D515 /* Assets.xcassets */; };
 		F68C624B22A8DD8A00E5D515 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68C624A22A8DD8A00E5D515 /* Preview Assets.xcassets */; };
 		F68C624E22A8DD8A00E5D515 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68C624C22A8DD8A00E5D515 /* LaunchScreen.storyboard */; };
 		F68C625922A8DD8A00E5D515 /* PixabayMVVMSwiftUICombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C625822A8DD8A00E5D515 /* PixabayMVVMSwiftUICombineTests.swift */; };
 		F68C626422A8DD8A00E5D515 /* PixabayMVVMSwiftUICombineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C626322A8DD8A00E5D515 /* PixabayMVVMSwiftUICombineUITests.swift */; };
+		F68C627222A8DE0B00E5D515 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C627122A8DE0B00E5D515 /* ImageModel.swift */; };
+		F68C627822A8E61800E5D515 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C627722A8E61800E5D515 /* ImageDetailView.swift */; };
+		F68C627D22A8ED5C00E5D515 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C627C22A8ED5C00E5D515 /* ImageStore.swift */; };
+		F68C628122A8EECF00E5D515 /* PixaBayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C627F22A8EECF00E5D515 /* PixaBayService.swift */; };
+		F68C628222A8EECF00E5D515 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C628022A8EECF00E5D515 /* ServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F6392AA622AAD9AB00CE518C /* ImageList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageList.swift; sourceTree = "<group>"; };
 		F68C623E22A8DD8900E5D515 /* PixabayMVVMSwiftUICombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixabayMVVMSwiftUICombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68C624122A8DD8900E5D515 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F68C624322A8DD8900E5D515 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F68C624522A8DD8900E5D515 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F68C624522A8DD8900E5D515 /* ImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListView.swift; sourceTree = "<group>"; };
 		F68C624722A8DD8A00E5D515 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F68C624A22A8DD8A00E5D515 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F68C624D22A8DD8A00E5D515 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,11 @@
 		F68C625F22A8DD8A00E5D515 /* PixabayMVVMSwiftUICombineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixabayMVVMSwiftUICombineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68C626322A8DD8A00E5D515 /* PixabayMVVMSwiftUICombineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayMVVMSwiftUICombineUITests.swift; sourceTree = "<group>"; };
 		F68C626522A8DD8A00E5D515 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F68C627122A8DE0B00E5D515 /* ImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		F68C627722A8E61800E5D515 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
+		F68C627C22A8ED5C00E5D515 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		F68C627F22A8EECF00E5D515 /* PixaBayService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PixaBayService.swift; sourceTree = "<group>"; };
+		F68C628022A8EECF00E5D515 /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6392AAA22AAE2EC00CE518C /* SwURL in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +97,7 @@
 				F68C625722A8DD8A00E5D515 /* PixabayMVVMSwiftUICombineTests */,
 				F68C626222A8DD8A00E5D515 /* PixabayMVVMSwiftUICombineUITests */,
 				F68C623F22A8DD8900E5D515 /* Products */,
+				F68C628322A8F08100E5D515 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +114,12 @@
 		F68C624022A8DD8900E5D515 /* PixabayMVVMSwiftUICombine */ = {
 			isa = PBXGroup;
 			children = (
+				F68C627E22A8EEC400E5D515 /* Service */,
+				F68C627922A8ED3D00E5D515 /* Store */,
+				F68C627422A8DE1700E5D515 /* View */,
+				F68C627322A8DE0E00E5D515 /* Model */,
 				F68C624122A8DD8900E5D515 /* AppDelegate.swift */,
 				F68C624322A8DD8900E5D515 /* SceneDelegate.swift */,
-				F68C624522A8DD8900E5D515 /* ContentView.swift */,
 				F68C624722A8DD8A00E5D515 /* Assets.xcassets */,
 				F68C624C22A8DD8A00E5D515 /* LaunchScreen.storyboard */,
 				F68C624F22A8DD8A00E5D515 /* Info.plist */,
@@ -136,6 +154,64 @@
 			path = PixabayMVVMSwiftUICombineUITests;
 			sourceTree = "<group>";
 		};
+		F68C627322A8DE0E00E5D515 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F68C627122A8DE0B00E5D515 /* ImageModel.swift */,
+				F6392AA622AAD9AB00CE518C /* ImageList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F68C627422A8DE1700E5D515 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F68C627622A8E5FC00E5D515 /* ImageList */,
+				F68C627522A8E5F600E5D515 /* ImageDetail */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F68C627522A8E5F600E5D515 /* ImageDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F68C627722A8E61800E5D515 /* ImageDetailView.swift */,
+			);
+			path = ImageDetail;
+			sourceTree = "<group>";
+		};
+		F68C627622A8E5FC00E5D515 /* ImageList */ = {
+			isa = PBXGroup;
+			children = (
+				F68C624522A8DD8900E5D515 /* ImageListView.swift */,
+			);
+			path = ImageList;
+			sourceTree = "<group>";
+		};
+		F68C627922A8ED3D00E5D515 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				F68C627C22A8ED5C00E5D515 /* ImageStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		F68C627E22A8EEC400E5D515 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F68C627F22A8EECF00E5D515 /* PixaBayService.swift */,
+				F68C628022A8EECF00E5D515 /* ServiceProtocol.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F68C628322A8F08100E5D515 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +228,9 @@
 			dependencies = (
 			);
 			name = PixabayMVVMSwiftUICombine;
+			packageProductDependencies = (
+				F6392AA922AAE2EC00CE518C /* SwURL */,
+			);
 			productName = PixabayMVVMSwiftUICombine;
 			productReference = F68C623E22A8DD8900E5D515 /* PixabayMVVMSwiftUICombine.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +303,9 @@
 				Base,
 			);
 			mainGroup = F68C623522A8DD8900E5D515;
+			packageReferences = (
+				F6392AA822AAE2EC00CE518C /* XCRemoteSwiftPackageReference "SwURL" */,
+			);
 			productRefGroup = F68C623F22A8DD8900E5D515 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -267,9 +349,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6392AA722AAD9AB00CE518C /* ImageList.swift in Sources */,
 				F68C624222A8DD8900E5D515 /* AppDelegate.swift in Sources */,
+				F68C627222A8DE0B00E5D515 /* ImageModel.swift in Sources */,
+				F68C628122A8EECF00E5D515 /* PixaBayService.swift in Sources */,
+				F68C628222A8EECF00E5D515 /* ServiceProtocol.swift in Sources */,
 				F68C624422A8DD8900E5D515 /* SceneDelegate.swift in Sources */,
-				F68C624622A8DD8900E5D515 /* ContentView.swift in Sources */,
+				F68C624622A8DD8900E5D515 /* ImageListView.swift in Sources */,
+				F68C627822A8E61800E5D515 /* ImageDetailView.swift in Sources */,
+				F68C627D22A8ED5C00E5D515 /* ImageStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +526,10 @@
 				DEVELOPMENT_ASSET_PATHS = "PixabayMVVMSwiftUICombine/Preview\\ Content";
 				DEVELOPMENT_TEAM = 7F8866H6R9;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PixabayMVVMSwiftUICombine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -458,6 +550,10 @@
 				DEVELOPMENT_ASSET_PATHS = "PixabayMVVMSwiftUICombine/Preview\\ Content";
 				DEVELOPMENT_TEAM = 7F8866H6R9;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PixabayMVVMSwiftUICombine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -592,6 +688,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F6392AA822AAE2EC00CE518C /* XCRemoteSwiftPackageReference "SwURL" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cmtrounce/SwURL";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F6392AA922AAE2EC00CE518C /* SwURL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6392AA822AAE2EC00CE518C /* XCRemoteSwiftPackageReference "SwURL" */;
+			productName = SwURL;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F68C623622A8DD8900E5D515 /* Project object */;
 }
