@@ -5,29 +5,35 @@
 import SwiftUI
 import UIKit
 
-struct SwiftyHUD: UIViewRepresentable {
+public struct SwiftyHUD: UIViewRepresentable {
 
-    typealias UIViewType = UIActivityIndicatorView
+    public typealias UIViewType = UIActivityIndicatorView
 
     let style: UIActivityIndicatorView.Style
 
-    func makeUIView(context: UIViewRepresentableContext<SwiftyHUD>) -> SwiftyHUD.UIViewType {
+    public func makeUIView(context: UIViewRepresentableContext<SwiftyHUD>) -> SwiftyHUD.UIViewType {
         return UIActivityIndicatorView(style: style)
     }
 
-    func updateUIView(_ uiView: SwiftyHUD.UIViewType, context: UIViewRepresentableContext<SwiftyHUD>) {
+    public func updateUIView(_ uiView: SwiftyHUD.UIViewType, context: UIViewRepresentableContext<SwiftyHUD>) {
         uiView.startAnimating()
     }
 }
 
-struct SwiftyHUDView<Content>: View where Content: View {
-    @Binding var isShowing: Bool
-    var content: () -> Content
+@available(iOS 13.0, *)
+public struct SwiftyHUDView<Content>: View where Content: View {
+    private var isShowing: Binding<Bool>
+    private var content: () -> Content
 
-    var body: some View {
+    public init(isShowing: Binding<Bool>, content: @escaping () -> Content) {
+        self.isShowing = isShowing
+        self.content = content
+    }
+
+    public var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .center) {
-                if (!self.isShowing) {
+                if (!self.isShowing.value) {
                     self.content()
                 } else {
                     self.content()
@@ -47,18 +53,3 @@ struct SwiftyHUDView<Content>: View where Content: View {
         }
     }
 }
-
-#if DEBUG
-struct SwiftyHUDView_Previews: PreviewProvider {
-
-    static var previews: some View {
-        SwiftyHUDView(isShowing: .constant(true)) {
-            NavigationView {
-                List(["1", "2", "3", "4", "5"].identified(by: \.self)) { row in
-                    Text(row)
-                    }.navigationBarTitle(Text("A List"), displayMode: .large)
-            }
-        }
-    }
-}
-#endif

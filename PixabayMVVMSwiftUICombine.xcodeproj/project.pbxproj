@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F6365FCF22AE75240043135E /* SwiftyHUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6365FCE22AE75240043135E /* SwiftyHUDView.swift */; };
 		F6392AA722AAD9AB00CE518C /* ImageListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6392AA622AAD9AB00CE518C /* ImageListModel.swift */; };
 		F6392AAA22AAE2EC00CE518C /* SwURL in Frameworks */ = {isa = PBXBuildFile; productRef = F6392AA922AAE2EC00CE518C /* SwURL */; };
 		F643913F22AEB60D0031F5F9 /* PixaBayServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F643913E22AEB60D0031F5F9 /* PixaBayServiceProtocol.swift */; };
 		F643914222AEB7910031F5F9 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F643914122AEB7910031F5F9 /* MockData.swift */; };
+		F643914722AF01C40031F5F9 /* SwiftyHUDView in Frameworks */ = {isa = PBXBuildFile; productRef = F643914622AF01C40031F5F9 /* SwiftyHUDView */; };
 		F68C624222A8DD8900E5D515 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C624122A8DD8900E5D515 /* AppDelegate.swift */; };
 		F68C624422A8DD8900E5D515 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C624322A8DD8900E5D515 /* SceneDelegate.swift */; };
 		F68C624622A8DD8900E5D515 /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C624522A8DD8900E5D515 /* ImageListView.swift */; };
 		F68C624822A8DD8A00E5D515 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68C624722A8DD8A00E5D515 /* Assets.xcassets */; };
-		F68C624B22A8DD8A00E5D515 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68C624A22A8DD8A00E5D515 /* Preview Assets.xcassets */; };
 		F68C624E22A8DD8A00E5D515 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68C624C22A8DD8A00E5D515 /* LaunchScreen.storyboard */; };
 		F68C625922A8DD8A00E5D515 /* ImageListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C625822A8DD8A00E5D515 /* ImageListViewModelTests.swift */; };
 		F68C626422A8DD8A00E5D515 /* PixabayMVVMSwiftUICombineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C626322A8DD8A00E5D515 /* PixabayMVVMSwiftUICombineUITests.swift */; };
@@ -45,16 +44,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F6365FCE22AE75240043135E /* SwiftyHUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyHUDView.swift; sourceTree = "<group>"; };
 		F6392AA622AAD9AB00CE518C /* ImageListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageListModel.swift; sourceTree = "<group>"; };
 		F643913E22AEB60D0031F5F9 /* PixaBayServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixaBayServiceProtocol.swift; sourceTree = "<group>"; };
 		F643914122AEB7910031F5F9 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		F643914322AEFE680031F5F9 /* SwiftyHUDView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SwiftyHUDView; sourceTree = "<group>"; };
 		F68C623E22A8DD8900E5D515 /* PixabayMVVMSwiftUICombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixabayMVVMSwiftUICombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68C624122A8DD8900E5D515 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F68C624322A8DD8900E5D515 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F68C624522A8DD8900E5D515 /* ImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListView.swift; sourceTree = "<group>"; };
 		F68C624722A8DD8A00E5D515 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F68C624A22A8DD8A00E5D515 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F68C624D22A8DD8A00E5D515 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F68C624F22A8DD8A00E5D515 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68C625422A8DD8A00E5D515 /* PixabayMVVMSwiftUICombineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixabayMVVMSwiftUICombineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6392AAA22AAE2EC00CE518C /* SwURL in Frameworks */,
+				F643914722AF01C40031F5F9 /* SwiftyHUDView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,25 +100,8 @@
 			children = (
 				F643914022AEB77D0031F5F9 /* TestSupport */,
 				F68C627E22A8EEC400E5D515 /* Service */,
-				F6365FCC22AE74F50043135E /* View */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		F6365FCC22AE74F50043135E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F6365FCD22AE74F90043135E /* SwiftyHUDView */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F6365FCD22AE74F90043135E /* SwiftyHUDView */ = {
-			isa = PBXGroup;
-			children = (
-				F6365FCE22AE75240043135E /* SwiftyHUDView.swift */,
-			);
-			path = SwiftyHUDView;
 			sourceTree = "<group>";
 		};
 		F643914022AEB77D0031F5F9 /* TestSupport */ = {
@@ -133,6 +115,7 @@
 		F68C623522A8DD8900E5D515 = {
 			isa = PBXGroup;
 			children = (
+				F643914322AEFE680031F5F9 /* SwiftyHUDView */,
 				F68C624022A8DD8900E5D515 /* PixabayMVVMSwiftUICombine */,
 				F68C625722A8DD8A00E5D515 /* PixabayMVVMSwiftUICombineTests */,
 				F68C626222A8DD8A00E5D515 /* PixabayMVVMSwiftUICombineUITests */,
@@ -163,17 +146,8 @@
 				F68C624722A8DD8A00E5D515 /* Assets.xcassets */,
 				F68C624C22A8DD8A00E5D515 /* LaunchScreen.storyboard */,
 				F68C624F22A8DD8A00E5D515 /* Info.plist */,
-				F68C624922A8DD8A00E5D515 /* Preview Content */,
 			);
 			path = PixabayMVVMSwiftUICombine;
-			sourceTree = "<group>";
-		};
-		F68C624922A8DD8A00E5D515 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				F68C624A22A8DD8A00E5D515 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		F68C625722A8DD8A00E5D515 /* PixabayMVVMSwiftUICombineTests */ = {
@@ -271,6 +245,7 @@
 			name = PixabayMVVMSwiftUICombine;
 			packageProductDependencies = (
 				F6392AA922AAE2EC00CE518C /* SwURL */,
+				F643914622AF01C40031F5F9 /* SwiftyHUDView */,
 			);
 			productName = PixabayMVVMSwiftUICombine;
 			productReference = F68C623E22A8DD8900E5D515 /* PixabayMVVMSwiftUICombine.app */;
@@ -364,7 +339,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F68C624E22A8DD8A00E5D515 /* LaunchScreen.storyboard in Resources */,
-				F68C624B22A8DD8A00E5D515 /* Preview Assets.xcassets in Resources */,
 				F68C624822A8DD8A00E5D515 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,7 +372,6 @@
 				F68C628122A8EECF00E5D515 /* PixaBayService.swift in Sources */,
 				F68C628222A8EECF00E5D515 /* ServiceProtocol.swift in Sources */,
 				F68C624422A8DD8900E5D515 /* SceneDelegate.swift in Sources */,
-				F6365FCF22AE75240043135E /* SwiftyHUDView.swift in Sources */,
 				F68C624622A8DD8900E5D515 /* ImageListView.swift in Sources */,
 				F68C627822A8E61800E5D515 /* ImageDetailView.swift in Sources */,
 				F68C627D22A8ED5C00E5D515 /* ImageListViewModel.swift in Sources */,
@@ -567,7 +540,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "PixabayMVVMSwiftUICombine/Preview\\ Content";
 				DEVELOPMENT_TEAM = 7F8866H6R9;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -591,7 +563,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "PixabayMVVMSwiftUICombine/Preview\\ Content";
 				DEVELOPMENT_TEAM = 7F8866H6R9;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -749,6 +720,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F6392AA822AAE2EC00CE518C /* XCRemoteSwiftPackageReference "SwURL" */;
 			productName = SwURL;
+		};
+		F643914622AF01C40031F5F9 /* SwiftyHUDView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftyHUDView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
