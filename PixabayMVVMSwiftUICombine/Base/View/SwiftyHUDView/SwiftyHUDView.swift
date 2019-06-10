@@ -5,22 +5,22 @@
 import SwiftUI
 import UIKit
 
-struct ActivityIndicator: UIViewRepresentable {
+struct SwiftyHUD: UIViewRepresentable {
 
     typealias UIViewType = UIActivityIndicatorView
 
     let style: UIActivityIndicatorView.Style
 
-    func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> ActivityIndicator.UIViewType {
+    func makeUIView(context: UIViewRepresentableContext<SwiftyHUD>) -> SwiftyHUD.UIViewType {
         return UIActivityIndicatorView(style: style)
     }
 
-    func updateUIView(_ uiView: ActivityIndicator.UIViewType, context: UIViewRepresentableContext<ActivityIndicator>) {
+    func updateUIView(_ uiView: SwiftyHUD.UIViewType, context: UIViewRepresentableContext<SwiftyHUD>) {
         uiView.startAnimating()
     }
 }
 
-struct ActivityIndicatorView<Content>: View where Content: View {
+struct SwiftyHUDView<Content>: View where Content: View {
     @Binding var isShowing: Bool
     var content: () -> Content
 
@@ -36,7 +36,7 @@ struct ActivityIndicatorView<Content>: View where Content: View {
 
                     VStack {
                         Text("Loading ...")
-                        ActivityIndicator(style: .large)
+                        SwiftyHUD(style: .large)
                     }
                     .frame(width: geometry.size.width / 2.0, height: 200.0)
                     .background(Color.secondary.colorInvert())
@@ -49,10 +49,10 @@ struct ActivityIndicatorView<Content>: View where Content: View {
 }
 
 #if DEBUG
-struct ActivityIndicatorView_Previews: PreviewProvider {
+struct SwiftyHUDView_Previews: PreviewProvider {
 
     static var previews: some View {
-        ActivityIndicatorView(isShowing: .constant(true)) {
+        SwiftyHUDView(isShowing: .constant(true)) {
             NavigationView {
                 List(["1", "2", "3", "4", "5"].identified(by: \.self)) { row in
                     Text(row)

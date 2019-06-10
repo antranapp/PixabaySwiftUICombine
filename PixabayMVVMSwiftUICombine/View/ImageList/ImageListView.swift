@@ -18,7 +18,7 @@ struct ImageListView : View {
     // MARK: APIs
 
     var body: some View {
-        ActivityIndicatorView(isShowing: $viewModel.isActive) {
+        SwiftyHUDView(isShowing: $viewModel.isActive) {
             NavigationView {
                 Section {
                     HStack {
