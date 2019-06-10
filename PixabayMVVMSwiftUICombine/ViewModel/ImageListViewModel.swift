@@ -20,6 +20,8 @@ class ImageListViewModel: BindableObject {
     }
 
     var didChange = PassthroughSubject<Void, Never>()
+
+    /// Bindable Property used for showing/hiding ActivityIndicator.
     var isActive: Bool = false
 
     // Private

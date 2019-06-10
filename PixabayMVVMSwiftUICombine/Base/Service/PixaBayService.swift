@@ -5,6 +5,7 @@
 import Foundation
 import Combine
 
+/// Service responsible for fetching images from Pixabay.com
 class PixaBayService: ServiceProtocol {
 
     func fetch(searchTerm: String) -> Publishers.Future<ImageListModel, Error> {
