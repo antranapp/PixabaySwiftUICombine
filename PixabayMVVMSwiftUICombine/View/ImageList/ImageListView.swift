@@ -11,7 +11,7 @@ struct ImageListView : View {
 
     // MARK: Properties
 
-    @ObjectBinding var viewModel = ImageListViewModel(images: [])
+    @ObjectBinding var viewModel = ImageListViewModel(pixaBayService: PixaBayService())
     @State private var searchTerm: String = ""
     @State private var isLoading: Bool = false
 
@@ -50,7 +50,7 @@ struct ImageListView : View {
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        let viewModel = ImageListViewModel(images: testData)
+        let viewModel = ImageListViewModel(pixaBayService: PixaBayService())
         var view = ImageListView()
         view.viewModel = viewModel
         return view

@@ -15,13 +15,14 @@ struct ImageDetailView : View {
 
     var body: some View {
         RemoteImageView(url: URL(string: image.largeImageURL)!)
+            .navigationBarTitle(Text("Detail"))
     }
 }
 
 #if DEBUG
 struct ImageDetailView_Previews : PreviewProvider {
     static var previews: some View {
-        NavigationView { ImageDetailView(image: testData[0]) }  
+        NavigationView { ImageDetailView(image: testData.hits[0]) }  
     }
 }
 #endif

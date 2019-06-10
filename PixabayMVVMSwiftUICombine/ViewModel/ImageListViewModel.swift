@@ -11,7 +11,7 @@ class ImageListViewModel: BindableObject {
 
     // Public
 
-    var images: [ImageModel] {
+    var images: [ImageModel] = [] {
         didSet {
             DispatchQueue.main.async {
                 self.didChange.send(())
@@ -26,12 +26,12 @@ class ImageListViewModel: BindableObject {
 
     // Private
 
-    private let pixaBayService = PixaBayService()
+    private let pixaBayService: PixaBayServiceProtocol
 
     // MARK: Setup
 
-    init(images: [ImageModel] = []) {
-        self.images = images
+    init(pixaBayService: PixaBayServiceProtocol) {
+        self.pixaBayService = pixaBayService
     }
 
     // MARK: APIs

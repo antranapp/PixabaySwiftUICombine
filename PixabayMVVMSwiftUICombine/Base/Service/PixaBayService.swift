@@ -6,7 +6,7 @@ import Foundation
 import Combine
 
 /// Service responsible for fetching images from Pixabay.com
-class PixaBayService: ServiceProtocol {
+class PixaBayService: PixaBayServiceProtocol {
 
     func fetch(searchTerm: String) -> Publishers.Future<ImageListModel, Error> {
         let urlString = "https://pixabay.com/api/?key=107764-f19c20d5ca4d545d9b0a09de3&q=\(searchTerm)&image_type=photo&pretty=true"
