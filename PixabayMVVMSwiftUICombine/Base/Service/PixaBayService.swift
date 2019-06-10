@@ -7,45 +7,46 @@ import Combine
 
 class PixaBayService: ServiceProtocol {
 
-    func fetch(searchTerm: String, completion: @escaping (_ data: ImageListModel?, _ error: Error?) -> Void) {
+    func fetch(searchTerm: String) -> Publishers.Future<ImageListModel, Error> {
         let urlString = "https://pixabay.com/api/?key=107764-f19c20d5ca4d545d9b0a09de3&q=\(searchTerm)&image_type=photo&pretty=true"
         let url = URL(string: urlString)!
 
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard error == nil else {
-                completion(nil, error)
-                return
-            }
+        return Publishers.Future { resolver in
 
-            guard let data = data else {
-                completion(nil, ServiceNetworkError.noData)
-                return
-            }
+            URLSession.shared.dataTask(with: url) { data, _, error in
+                guard error == nil else {
+                    return resolver(Result.failure(error!))
+                }
 
-            do {
-                let decoder = JSONDecoder()
-                let imageData = try decoder.decode(ImageListModel.self, from: data)
-                completion(imageData, nil)
-            } catch let DecodingError.dataCorrupted(context) {
-                print(context.debugDescription)
-                completion(nil, ServiceParsingError.dataCorrupted)
-            } catch let DecodingError.keyNotFound(key, context) {
-                print("Key '\(key)' not found: \(context.debugDescription)")
-                print("codingPath: \(context.codingPath)")
-                completion(nil, ServiceParsingError.keyNotFound)
-            } catch let DecodingError.valueNotFound(value, context) {
-                print("Value '\(value)' not found: \(context.debugDescription)")
-                print("codingPath: \(context.codingPath)")
-                completion(nil, ServiceParsingError.valueNotFound)
-            } catch let DecodingError.typeMismatch(type, context)  {
-                print("Type '\(type)' mismatch: \(context.debugDescription)")
-                print("codingPath: \(context.codingPath)")
-                completion(nil, ServiceParsingError.typeMismatch)
-            } catch {
-                print("error: \(error)")
-                completion(nil, ServiceParsingError.generalError(error))
-            }
-        }.resume()
+                guard let data = data else {
+                    return resolver(Result.failure(ServiceNetworkError.noData))
+                }
+
+                do {
+                    let decoder = JSONDecoder()
+                    let imageData = try decoder.decode(ImageListModel.self, from: data)
+                    return resolver(Result.success(imageData))
+                } catch let DecodingError.dataCorrupted(context) {
+                    print(context.debugDescription)
+                    return resolver(Result.failure(ServiceParsingError.dataCorrupted))
+                } catch let DecodingError.keyNotFound(key, context) {
+                    print("Key '\(key)' not found: \(context.debugDescription)")
+                    print("codingPath: \(context.codingPath)")
+                    return resolver(Result.failure(ServiceParsingError.keyNotFound))
+                } catch let DecodingError.valueNotFound(value, context) {
+                    print("Value '\(value)' not found: \(context.debugDescription)")
+                    print("codingPath: \(context.codingPath)")
+                    return resolver(Result.failure(ServiceParsingError.valueNotFound))
+                } catch let DecodingError.typeMismatch(type, context)  {
+                    print("Type '\(type)' mismatch: \(context.debugDescription)")
+                    print("codingPath: \(context.codingPath)")
+                    return resolver(Result.failure(ServiceParsingError.typeMismatch))
+                } catch {
+                    print("error: \(error)")
+                    return resolver(Result.failure(ServiceParsingError.generalError(error)))
+                }
+            }.resume()
+        }
     }
 }
 

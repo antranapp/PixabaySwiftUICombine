@@ -23,22 +23,10 @@ class ImageListViewModel: BindableObject {
 
     func search(withTerm term: String) {
 
-        isActive = true
+        self.isActive = true
 
-        pixaBayService.fetch(searchTerm: term) { [weak self] (data, error) in
-
+        _ = pixaBayService.fetch(searchTerm: term).sink { [weak self] data in
             self?.isActive = false
-
-            guard error == nil else {
-                print(error!)
-                return
-            }
-
-            guard let data = data else {
-                print("no data")
-                return
-            }
-
             self?.images = data.hits
         }
     }
