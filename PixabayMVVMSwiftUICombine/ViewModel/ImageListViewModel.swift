@@ -5,7 +5,7 @@
 import SwiftUI
 import Combine
 
-class ImageStore: BindableObject {
+class ImageListViewModel: BindableObject {
 
     var images: [ImageModel] {
         didSet {
@@ -22,7 +22,13 @@ class ImageStore: BindableObject {
     }
 
     func search(withTerm term: String) {
+
+        isActive = true
+
         pixaBayService.fetch(searchTerm: term) { [weak self] (data, error) in
+
+            self?.isActive = false
+
             guard error == nil else {
                 print(error!)
                 return
@@ -38,4 +44,5 @@ class ImageStore: BindableObject {
     }
 
     var didChange = PassthroughSubject<Void, Never>()
+    var isActive: Bool = false
 }
