@@ -13,6 +13,7 @@ struct ImageListView : View {
 
     @ObjectBinding var viewModel = ImageListViewModel(images: [])
     @State private var searchTerm: String = ""
+    @State private var isLoading: Bool = false
 
     // MARK: APIs
 
@@ -21,12 +22,11 @@ struct ImageListView : View {
             NavigationView {
                 Section {
                     HStack {
-                        TextField(self.$searchTerm, placeholder: Text("search term")) {
-                            self.viewModel.search(withTerm: self.searchTerm)
-                        }
-                        .textFieldStyle(.roundedBorder)
+                        TextField(self.$searchTerm, placeholder: Text("search term"))
+                            .textFieldStyle(.roundedBorder)
 
                         Button(action: {
+                            self.viewModel.isActive = true
                             self.viewModel.search(withTerm: self.searchTerm)
                         }) {
                             Text("Search")
