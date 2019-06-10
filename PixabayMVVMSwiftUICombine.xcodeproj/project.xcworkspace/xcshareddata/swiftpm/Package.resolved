@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "SwiftyHUDView",
+        "repositoryURL": "https://github.com/peacemoon/SwiftyUIView",
+        "state": {
+          "branch": null,
+          "revision": "44f579b7cbbcbff6e5457911d793eb5e178f59c8",
+          "version": "0.0.1"
+        }
+      },
+      {
         "package": "SwURL",
         "repositoryURL": "https://github.com/cmtrounce/SwURL",
         "state": {

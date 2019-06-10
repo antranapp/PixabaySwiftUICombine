@@ -11,7 +11,7 @@
 		F6392AAA22AAE2EC00CE518C /* SwURL in Frameworks */ = {isa = PBXBuildFile; productRef = F6392AA922AAE2EC00CE518C /* SwURL */; };
 		F643913F22AEB60D0031F5F9 /* PixaBayServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F643913E22AEB60D0031F5F9 /* PixaBayServiceProtocol.swift */; };
 		F643914222AEB7910031F5F9 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F643914122AEB7910031F5F9 /* MockData.swift */; };
-		F643914722AF01C40031F5F9 /* SwiftyHUDView in Frameworks */ = {isa = PBXBuildFile; productRef = F643914622AF01C40031F5F9 /* SwiftyHUDView */; };
+		F643914A22AF0B0C0031F5F9 /* SwiftyHUDView in Frameworks */ = {isa = PBXBuildFile; productRef = F643914922AF0B0C0031F5F9 /* SwiftyHUDView */; };
 		F68C624222A8DD8900E5D515 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C624122A8DD8900E5D515 /* AppDelegate.swift */; };
 		F68C624422A8DD8900E5D515 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C624322A8DD8900E5D515 /* SceneDelegate.swift */; };
 		F68C624622A8DD8900E5D515 /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C624522A8DD8900E5D515 /* ImageListView.swift */; };
@@ -47,7 +47,6 @@
 		F6392AA622AAD9AB00CE518C /* ImageListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageListModel.swift; sourceTree = "<group>"; };
 		F643913E22AEB60D0031F5F9 /* PixaBayServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixaBayServiceProtocol.swift; sourceTree = "<group>"; };
 		F643914122AEB7910031F5F9 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
-		F643914322AEFE680031F5F9 /* SwiftyHUDView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SwiftyHUDView; sourceTree = "<group>"; };
 		F68C623E22A8DD8900E5D515 /* PixabayMVVMSwiftUICombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixabayMVVMSwiftUICombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68C624122A8DD8900E5D515 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F68C624322A8DD8900E5D515 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6392AAA22AAE2EC00CE518C /* SwURL in Frameworks */,
-				F643914722AF01C40031F5F9 /* SwiftyHUDView in Frameworks */,
+				F643914A22AF0B0C0031F5F9 /* SwiftyHUDView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +114,6 @@
 		F68C623522A8DD8900E5D515 = {
 			isa = PBXGroup;
 			children = (
-				F643914322AEFE680031F5F9 /* SwiftyHUDView */,
 				F68C624022A8DD8900E5D515 /* PixabayMVVMSwiftUICombine */,
 				F68C625722A8DD8A00E5D515 /* PixabayMVVMSwiftUICombineTests */,
 				F68C626222A8DD8A00E5D515 /* PixabayMVVMSwiftUICombineUITests */,
@@ -245,7 +243,7 @@
 			name = PixabayMVVMSwiftUICombine;
 			packageProductDependencies = (
 				F6392AA922AAE2EC00CE518C /* SwURL */,
-				F643914622AF01C40031F5F9 /* SwiftyHUDView */,
+				F643914922AF0B0C0031F5F9 /* SwiftyHUDView */,
 			);
 			productName = PixabayMVVMSwiftUICombine;
 			productReference = F68C623E22A8DD8900E5D515 /* PixabayMVVMSwiftUICombine.app */;
@@ -321,6 +319,7 @@
 			mainGroup = F68C623522A8DD8900E5D515;
 			packageReferences = (
 				F6392AA822AAE2EC00CE518C /* XCRemoteSwiftPackageReference "SwURL" */,
+				F643914822AF0B0C0031F5F9 /* XCRemoteSwiftPackageReference "SwiftyUIView" */,
 			);
 			productRefGroup = F68C623F22A8DD8900E5D515 /* Products */;
 			projectDirPath = "";
@@ -713,6 +712,14 @@
 				minimumVersion = 0.0.2;
 			};
 		};
+		F643914822AF0B0C0031F5F9 /* XCRemoteSwiftPackageReference "SwiftyUIView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/peacemoon/SwiftyUIView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -721,8 +728,9 @@
 			package = F6392AA822AAE2EC00CE518C /* XCRemoteSwiftPackageReference "SwURL" */;
 			productName = SwURL;
 		};
-		F643914622AF01C40031F5F9 /* SwiftyHUDView */ = {
+		F643914922AF0B0C0031F5F9 /* SwiftyHUDView */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = F643914822AF0B0C0031F5F9 /* XCRemoteSwiftPackageReference "SwiftyUIView" */;
 			productName = SwiftyHUDView;
 		};
 /* End XCSwiftPackageProductDependency section */
