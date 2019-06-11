@@ -50,7 +50,7 @@ class ImageListViewModel: BindableObject {
                     print(error)
                     self?.images = []
                 }
-                self?.isActive = false
+                self?.isActive = false  
             }
         )
 

@@ -14,7 +14,6 @@ struct ImageListView : View {
 
     @ObjectBinding var viewModel = ImageListViewModel(pixaBayService: PixaBayService())
     @State private var searchTerm: String = ""
-    @State private var isLoading: Bool = false
 
     // MARK: APIs
 
