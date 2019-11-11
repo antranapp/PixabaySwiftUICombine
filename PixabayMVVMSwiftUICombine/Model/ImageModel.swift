@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-struct ImageModel: Identifiable, Decodable {
+struct ImageModel: Identifiable, Hashable, Decodable {
     var id: Int
     var largeImageURL: String
     var previewURL: String

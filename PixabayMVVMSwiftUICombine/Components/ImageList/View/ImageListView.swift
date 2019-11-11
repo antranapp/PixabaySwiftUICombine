@@ -12,7 +12,7 @@ struct ImageListView : View {
 
     // MARK: Properties
 
-    @ObjectBinding var viewModel = ImageListViewModel(pixaBayService: PixaBayService())
+    @ObservedObject var viewModel = ImageListViewModel(pixaBayService: PixaBayService())
     @State private var searchTerm: String = ""
 
     // MARK: APIs
@@ -20,10 +20,11 @@ struct ImageListView : View {
     var body: some View {
         SwiftyHUDView(isShowing: $viewModel.isActive) {
             NavigationView {
-                Section {
+                VStack {
                     HStack {
-                        TextField(self.$searchTerm, placeholder: Text("search term"))
-                            .textFieldStyle(.roundedBorder)
+                        TextField(
+                            "TextField",
+                            text: self.$searchTerm)
 
                         Button(action: {
                             self.viewModel.isActive = true
@@ -33,15 +34,31 @@ struct ImageListView : View {
                         }
                     }
                     .padding(EdgeInsets(top: 8.0, leading: 16.0, bottom: 8.0, trailing: 16.0))
-                }
 
-                Section {
-                    List(self.viewModel.images) { image in
-                        ImageCell(image: image)
+                    List {
+                        ForEach(self.viewModel.images, id: \.id) { image in
+                            ImageCell(image: image)
+                        }
                     }
                 }
-                .navigationBarTitle(Text("Images"))
-                .listStyle(.grouped)
+
+                .navigationBarTitle("Images")
+            }
+        }
+    }
+}
+
+struct ImageCell: View {
+    var image: ImageModel
+    var body: some View {
+        NavigationLink(destination: ImageDetailView(image: image)) {
+            HStack {
+                RemoteImageView
+                    .init(url: URL(string: image.previewURL)!, placeholderImage: Image.init(systemName: "icloud.and.arrow.down"))
+                    .frame(width: 30, height: 30, alignment: Alignment.center)
+                    .clipShape(Ellipse().size(width: 30, height: 30))
+                    .scaledToFit()
+                Text(image.previewURL)
             }
         }
     }
@@ -57,19 +74,3 @@ struct ContentView_Previews : PreviewProvider {
     }
 }
 #endif
-
-struct ImageCell: View {
-    var image: ImageModel
-    var body: some View {
-        NavigationButton(destination: ImageDetailView(image: image)) {
-            HStack {
-                RemoteImageView
-                    .init(url: URL(string: image.previewURL)!, placeholderImage: Image.init(systemName: "icloud.and.arrow.down"))
-                    .frame(width: 30, height: 30, alignment: Alignment.center)
-                    .clipShape(Ellipse().size(width: 30, height: 30))
-                    .scaledToFit()
-                Text(image.previewURL)
-            }
-        }
-    }
-}

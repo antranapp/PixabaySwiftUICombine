@@ -111,6 +111,30 @@
 			path = TestSupport;
 			sourceTree = "<group>";
 		};
+		F68BA70522B82FF000AF11B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F68C624522A8DD8900E5D515 /* ImageListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F68BA70622B82FF700AF11B9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F68C627C22A8ED5C00E5D515 /* ImageListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F68BA70722B8300800AF11B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F68C627722A8E61800E5D515 /* ImageDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F68C623522A8DD8900E5D515 = {
 			isa = PBXGroup;
 			children = (
@@ -135,8 +159,7 @@
 		F68C624022A8DD8900E5D515 /* PixabayMVVMSwiftUICombine */ = {
 			isa = PBXGroup;
 			children = (
-				F68C627922A8ED3D00E5D515 /* ViewModel */,
-				F68C627422A8DE1700E5D515 /* View */,
+				F68C627422A8DE1700E5D515 /* Components */,
 				F68C627322A8DE0E00E5D515 /* Model */,
 				F6365FCB22AE74EC0043135E /* Base */,
 				F68C624122A8DD8900E5D515 /* AppDelegate.swift */,
@@ -175,19 +198,19 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F68C627422A8DE1700E5D515 /* View */ = {
+		F68C627422A8DE1700E5D515 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				F68C627622A8E5FC00E5D515 /* ImageList */,
 				F68C627522A8E5F600E5D515 /* ImageDetail */,
 			);
-			path = View;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		F68C627522A8E5F600E5D515 /* ImageDetail */ = {
 			isa = PBXGroup;
 			children = (
-				F68C627722A8E61800E5D515 /* ImageDetailView.swift */,
+				F68BA70722B8300800AF11B9 /* View */,
 			);
 			path = ImageDetail;
 			sourceTree = "<group>";
@@ -195,17 +218,10 @@
 		F68C627622A8E5FC00E5D515 /* ImageList */ = {
 			isa = PBXGroup;
 			children = (
-				F68C624522A8DD8900E5D515 /* ImageListView.swift */,
+				F68BA70522B82FF000AF11B9 /* View */,
+				F68BA70622B82FF700AF11B9 /* ViewModel */,
 			);
 			path = ImageList;
-			sourceTree = "<group>";
-		};
-		F68C627922A8ED3D00E5D515 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F68C627C22A8ED5C00E5D515 /* ImageListViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F68C627E22A8EEC400E5D515 /* Service */ = {
@@ -470,7 +486,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -524,7 +539,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -709,7 +723,7 @@
 			repositoryURL = "https://github.com/cmtrounce/SwURL";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.2;
+				minimumVersion = 0.2.2;
 			};
 		};
 		F643914822AF0B0C0031F5F9 /* XCRemoteSwiftPackageReference "SwiftyUIView" */ = {
@@ -717,7 +731,7 @@
 			repositoryURL = "https://github.com/peacemoon/SwiftyUIView";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.1;
+				minimumVersion = 0.0.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

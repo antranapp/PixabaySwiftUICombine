@@ -5,21 +5,21 @@
 import SwiftUI
 import Combine
 
-class ImageListViewModel: BindableObject {
+class ImageListViewModel: ObservableObject {
 
     // MARK: Properties
 
     // Public
 
     var images: [ImageModel] = [] {
-        didSet {
+        willSet {
             DispatchQueue.main.async {
-                self.didChange.send(())
+                self.objectWillChange.send()
             }
         }
     }
 
-    var didChange = PassthroughSubject<Void, Never>()
+    var objectWillChange = ObservableObjectPublisher()
 
     /// Bindable Property used for showing/hiding ActivityIndicator.
     var isActive: Bool = false
@@ -27,6 +27,8 @@ class ImageListViewModel: BindableObject {
     // Private
 
     private let pixaBayService: PixaBayServiceProtocol
+
+    private var subscription: AnyCancellable?
 
     // MARK: Setup
 
@@ -40,20 +42,17 @@ class ImageListViewModel: BindableObject {
 
         self.isActive = true
 
-        let dataUpdater = AnySubscriber<ImageListModel, Error>(
-            receiveValue: { [weak self] imageListModel -> Subscribers.Demand in
-                self?.images = imageListModel.hits
-                return .unlimited
-            },
+        subscription = pixaBayService.fetch(searchTerm: term).sink(
             receiveCompletion: { [weak self] completion in
                 if case let .failure(error) = completion {
                     print(error)
                     self?.images = []
                 }
-                self?.isActive = false  
+                self?.isActive = false
+            },
+            receiveValue: { [weak self] imageListModel  in
+                self?.images = imageListModel.hits
             }
         )
-
-        pixaBayService.fetch(searchTerm: term).subscribe(dataUpdater)
     }
 }

@@ -5,5 +5,5 @@
 import Combine
 
 protocol PixaBayServiceProtocol: ServiceProtocol {
-    func fetch(searchTerm: String) -> Publishers.Future<ImageListModel, Error>
+    func fetch(searchTerm: String) -> Future<ImageListModel, Error>
 }

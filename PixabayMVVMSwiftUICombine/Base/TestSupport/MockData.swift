@@ -20,8 +20,8 @@ let testData = ImageListModel(
 )
 
 class PixaBayServiceMock: PixaBayServiceProtocol {
-    func fetch(searchTerm: String) -> Publishers.Future<ImageListModel, Error> {
-        return Publishers.Future { resolver in
+    func fetch(searchTerm: String) -> Future<ImageListModel, Error> {
+        return Future { resolver in
             return resolver(self.result)
         }
     }

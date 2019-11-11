@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/peacemoon/SwiftyUIView",
         "state": {
           "branch": null,
-          "revision": "44f579b7cbbcbff6e5457911d793eb5e178f59c8",
-          "version": "0.0.1"
+          "revision": "7544ad88c677ab863f0c18b160c4e3e327f7af23",
+          "version": "0.0.2"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/cmtrounce/SwURL",
         "state": {
           "branch": null,
-          "revision": "7aadb82224047ec2a2f9a1b5ff2d7768bb90fd85",
-          "version": "0.0.2"
+          "revision": "967e7e7c441374c76d5559e27db2a74a26160fe5",
+          "version": "0.2.2"
         }
       }
     ]
